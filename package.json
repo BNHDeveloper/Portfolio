@@ -1,8 +1,9 @@
 {
-  "homepage":"https://bnhdeveloper.github.io/Portfolio",
+  "homepage": "https://bnhdeveloper.github.io/Portfolio",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "start_url": ".",
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
     "@testing-library/jest-dom": "^5.17.0",
@@ -20,7 +21,7 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "main -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -42,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }
