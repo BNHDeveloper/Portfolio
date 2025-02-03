@@ -1,0 +1,5 @@
+input[type="file"] {
+    width: 90%;
+    border: 1px solid #333;
+    outline: var(--main-color);
+}

@@ -1,0 +1,77 @@
+.cours>div.flex {
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.cours>div.flex button {
+    font-size: 1.4rem;
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: #424242;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.cours .filter {
+    box-shadow: var(--shadow2);
+    background-color: #fff;
+    min-height: 100vh;
+    width: 25%;
+    min-width: 250px;
+    padding: 20px 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: -300px;
+    top: 0;
+    z-index: 1235;
+    overflow-y: hidden;
+}
+
+.cours .filter.active {
+    right: -10px;
+}
+
+.cours .filter li input {
+    margin: 0 10px;
+}
+
+.cours .filter li span {
+    margin: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.cours .filter li,
+.cours .filter ul {
+    margin-bottom: 10px;
+}
+
+.cours .filter input[type="submit"] {
+    color: #fff;
+    background-color: var(--main-color);
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.cours .filter input[type="submit"]:hover {
+    filter: saturate(200%);
+    -webkit-filter: saturate(200%);
+}
+
+@media (max-width: 450px) {
+    .cours>div.flex span {
+        font-size: 1.1rem;
+    }
+}

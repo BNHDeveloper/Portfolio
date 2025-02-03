@@ -1,0 +1,7 @@
+.swiper-slide.swiper-slide-active{
+    box-shadow: 0 16px 30px hsla(0, 0%, 0%, 0.25);
+    background: linear-gradient(to bottom right, #373434 0%, hsl(63deg 1.05% 12.61%) 50%);
+}
+.swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden.mySwiper {
+    overflow: visible;
+}

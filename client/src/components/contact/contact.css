@@ -1,0 +1,104 @@
+.contact .title::after {
+    width: 11%;
+}
+
+.contact .title::before {
+    width: 21%;
+}
+
+.contact {
+    padding: 0 10px;
+    margin: 10px;
+}
+
+.flex iframe {
+    width: 45%;
+    min-width: 290px;
+    border: 0;
+    background: transparent;
+    margin: 10px auto;
+}
+
+.contact .flex {
+    flex-wrap: wrap;
+}
+
+#homeContact {
+    min-width: 250px;
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+#homeContact>* {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#homeContact>*>* {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+#homeContact>*>* label {
+    margin-right: 10px;
+}
+
+.formule {
+    width: 45%;
+    padding: 10px;
+    text-align: center;
+}
+
+#homeContact>*>*>*.label {
+    width: 50%;
+    min-width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#homeContact textarea {
+    width: 90%;
+    min-height: 100px;
+}
+
+#homeContact input[type="submit"] {
+    width: 100px;
+    margin: 10px auto;
+    cursor: pointer;
+    background-image: var(--gradient);
+    color: #fff;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#homeContact input[type="submit"]:hover {
+    opacity: 0.7;
+}
+
+#homeContact input,
+#homeContact textarea {
+    background: #f6f6f6;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    margin: 10px 0px 10px 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+@media (max-width:992px) {
+    .formule {
+        width: 90%;
+    }
+}

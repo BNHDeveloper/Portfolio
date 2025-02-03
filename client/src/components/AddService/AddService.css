@@ -1,0 +1,109 @@
+.wrapping.addForm {
+    /* display: none; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000a5;
+    z-index: 1234567890;
+}
+
+.wrapping.addForm.active {
+    display: block;
+}
+
+.wrapping.addForm form>i {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    z-index: 1234567890;
+    cursor: pointer;
+}
+
+.wrapping.addForm>.form {
+    min-width: 450px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.wrapping.addForm>.form form {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrapping.addForm>.form .FormField {
+    margin: 5px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapping.addForm>.form .FormField>* {
+    margin: 5px 0;
+}
+
+.wrapping.addForm>.form .FormField.flex {
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.wrapping.addForm>.form .FormField span {
+    display: inline-block;
+    font-weight: 700;
+    color: #333;
+}
+
+.wrapping.addForm>.form .FormField textarea,
+.wrapping.addForm>.form .FormField input {
+    border: 1px solid #eee;
+    padding: 5px;
+    outline-color: var(--main-color);
+    text-transform: none;
+}
+
+.wrapping.addForm>.form .FormField textarea {
+    min-height: 70px;
+}
+
+.wrapping.addForm>.form input[type="submit"] {
+    color: #fff;
+    background-color: var(--main-color);
+    border: none;
+    padding: 5px;
+    min-width: 100px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.wrapping.addForm>.form input[type="submit"]:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 500px) {
+    .wrapping.addForm>.form {
+        min-width: 250px;
+    }
+}

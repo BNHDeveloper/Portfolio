@@ -1,0 +1,454 @@
+:root {
+    --main-color: #009688;
+    --light-color: #f6f6f6;
+    --back-color: #212428;
+    --white: #fff;
+    --black: #000;
+    --dark: #212121;
+    --grey: #636363;
+    --shadow: 0 0 0 0.2rem #333;
+    --shadow2: 0 6px 15px #ced4da4d;
+    --shadow3: -2px 8px 18px rgba(0, 0, 0, 0.294);
+    --gradient: linear-gradient(to right, #045c54, var(--main-color));
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+body {
+    scroll-behavior: smooth;
+    background-color: var(--white);
+    color: var(--dark);
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+}
+
+.shadow {
+    box-shadow: var(--shadow);
+}
+
+*::selection {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+a {
+    color: var(--dark);
+}
+
+.container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mr-5 {
+    display: inline-block;
+    margin: 5px;
+}
+
+.serviceTitle {
+    position: relative;
+    padding: 5px;
+    min-width: 150px;
+    width: calc(100% - 100px);
+    margin-left: 5px;
+    font-size: 2.4rem;
+    color: #413a3a;
+}
+
+.serviceTitle::before {
+    content: '';
+    position: absolute;
+    width: 10%;
+    height: 5px;
+    left: -10px;
+    bottom: -5px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.serviceTitle:hover {
+    color: #fff;
+}
+
+.serviceTitle:hover:before {
+    width: 100%;
+    height: 100%;
+    bottom: -3px;
+    left: -5px;
+    z-index: -1;
+}
+
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.section {
+    margin: 50px auto;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    position: relative;
+    font-size: 2.3rem;
+    color: #607d8b;
+    font-weight: 700;
+    margin: 50px auto;
+    text-align: center;
+    font-family: monospace;
+}
+
+.title::before,
+.title::after {
+    content: '';
+    position: absolute;
+    width: 51%;
+    height: 3px;
+    background: #607d8b;
+    left: 50%;
+    top: 60px;
+    transform: translate(-50%, -50%);
+}
+
+.title::after {
+    top: 70px;
+    width: 30%;
+}
+
+.br-r4 {
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.br-r5 {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.br-r6 {
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.br-r7 {
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+
+.br-r8 {
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.br-r10 {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.br-r20 {
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .serviceTitle {
+        font-size: 1.5rem;
+    }
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.3rem;
+    margin: 10px auto;
+}
+
+.list>* {
+    position: relative;
+    border: 1px solid #eee;
+    box-shadow: var(--shadow3);
+    margin-top: 50px;
+    height: 540px;
+}
+
+.list>*.h-6 {
+    height: 620px;
+}
+
+.list>* .image {
+    width: 100%;
+    height: 60%;
+}
+
+.list>* .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.list>* .content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.list>* .content .free {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    color: #fff;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.list>* .flex {
+    justify-content: space-around;
+}
+
+.list>* button {
+    margin: 10px;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+.list>* button:hover {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+.list>* button.order {
+    background-color: #f44336;
+}
+
+.list>* button.read {
+    background-color: #3f51b5;
+}
+
+.logout {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin: 20px auto;
+    color: #4e4848;
+}
+
+.logout:hover {
+    color: #b71111;
+}
+
+.dashboard>.action {
+    height: 150px;
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    z-index: 23;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.dashboard>.action>* {
+    font-size: 1.8rem;
+    margin: 10px;
+    background-color: var(--main-color);
+    color: #fff;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.dashboard>.action>*:hover {
+    outline: 5px solid #0096878c;
+}
+
+.dashboard>.action>*:last-child {
+    background-color: #b71111;
+}
+
+.dashboard>.action>*:last-child:hover {
+    outline: 5px solid #c51313c3;
+}
+
+.listTable {
+    box-shadow: var(--shadow3);
+    padding: 10px;
+    margin: 20px auto;
+    width: 95%;
+}
+
+.listTable form,
+.listTable>div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.listTable>*:not(:last-child) {
+    font-weight: 600;
+    border-bottom: 1px solid #9e9e9e;
+    padding: 5px 0;
+    margin: 5px 0;
+}
+
+.listTable form>*,
+.listTable>div>* {
+    width: calc(100% / 6);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.listTable>div>div,
+.listTable>form>div {
+    border-left: 1px solid #495057b1;
+}
+
+.listTable form input {
+    border: none;
+    outline: none;
+    width: 90%;
+    margin: 5px auto;
+    background-color: transparent;
+}
+
+.listTable form .action {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px 0;
+}
+
+.listTable form .action>* {
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--main-color);
+}
+
+.listTable form .action>*:first-child {
+    color: #f44336;
+}
+
+.listTable form input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.listTable form i.ti-upload {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+@media (max-width: 500px) {
+    .list>* .content span {
+        font-size: 3.3vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .list>* button {
+        width: 120px;
+    }
+}

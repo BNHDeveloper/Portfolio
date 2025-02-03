@@ -1,0 +1,258 @@
+#dashboard {
+    flex-direction: row;
+    overflow-x: hidden;
+    box-shadow: var(--shadow2);
+    min-height: 100vh;
+}
+
+#dashboard>div {
+    width: 100%;
+}
+
+#dashboard nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    left: -250px;
+    z-index: 1234;
+}
+
+#dashboard nav.active {
+    left: 0;
+}
+
+#dashboard .nav {
+    position: relative;
+    width: 20%;
+    min-width: 250px;
+    min-height: 100vh;
+    background-color: #fff;
+    box-shadow: var(--shadow2);
+}
+
+#dashboard .logo {
+    width: 100%;
+    justify-content: space-around;
+}
+
+#dashboard .logo img {
+    width: 70px;
+}
+
+#dashboard .logo span {
+    width: 120px;
+    color: var(--main-color);
+}
+
+#dashboard .nav ul {
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+#dashboard .nav ul li {
+    position: relative;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    height: 100%;
+    overflow: hidden;
+}
+
+#dashboard .nav ul li::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background-color: var(--main-color);
+    transform: translateX(-10px);
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+}
+
+#dashboard .nav ul li::after {
+    top: 0;
+    left: 0;
+    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
+}
+
+#dashboard .nav ul li {
+    background-color: #f6f6f6;
+}
+
+#dashboard .nav ul li a {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+#dashboard .nav ul li:hover a {
+    color: #fff;
+}
+
+#dashboard .nav ul li:after {
+    left: 0;
+    top: 50%;
+    height: 100%;
+    width: 5px;
+}
+
+#dashboard .nav ul li.active a {
+    color: #fff;
+}
+
+#dashboard .nav ul li.active:before,
+#dashboard .nav ul li.active:after {
+    width: 100%
+}
+
+#dashboard .nav ul li a {
+    position: relative;
+    z-index: 3;
+}
+
+#dashboard .nav ul li.active:after,
+#dashboard .nav ul li:hover:after,
+#dashboard .nav ul li,
+#dashboard .nav ul li.active {
+    transition: all 0.4s ease-out;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+}
+
+#dashboard .nav ul li.active:hover a {
+    font-size: 1rem;
+}
+
+#dashboard .nav ul li:hover:after {
+    width: 100%;
+}
+
+#dashboard .nav button i {
+    display: flex;
+    width: 60px;
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(100% - 20px);
+    justify-content: flex-end;
+    font-size: 1.3rem;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    background-color: var(--main-color);
+    box-shadow: 5px 5px 17px 0px #b2adada1;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    z-index: -1;
+}
+
+.list.users>* {
+    height: 100%;
+    min-height: 150px;
+}
+
+.flex.details {
+    justify-content: flex-start;
+}
+
+.flex.details>* {
+    margin-left: 10px;
+}
+
+.details {
+    margin: 20px 5px;
+    font-size: 1.3rem;
+}
+
+.image.details {
+    position: relative;
+    width: 100%;
+    min-height: 350px;
+}
+
+.image.details>* {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+input.uppdate {
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+input.uppdate.title {
+    background-color: transparent;
+    width: 100%;
+    text-align: start;
+    margin: 0;
+    color: #456574;
+}
+
+.uppdatePage::before {
+    display: none;
+}
+
+input.uppdate:focus {
+    color: var(--main-color);
+}
+
+textarea.uppdate {
+    width: 90%;
+    min-height: 40%;
+    font-size: 1.3rem;
+    border: none;
+    padding: 5px;
+    outline: none;
+}
+
+textarea.uppdate::-webkit-scrollbar {
+    display: none;
+}
+
+input.submit {
+    padding: 10px;
+    border: none;
+    background-color: #607d8b;
+    color: #fff;
+    min-width: 150px;
+    margin: 10px calc(50% - 150px/2);
+}
+
+input.submit:hover {
+    opacity: 0.7;
+}
+
+.FormFields.uppdate {
+    height: 100vh;
+}
+
+.FormFields textarea.uppdate {
+    position: relative;
+}
+
+@media (max-width: 600px) {
+
+    textarea.uppdate,
+    .details {
+        font-size: .9rem;
+    }
+}
